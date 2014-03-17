@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="fill_parent"
+  android:orientation="vertical">
+	<RelativeLayout
+    android:orientation="vertical" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:padding="10px">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/header"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/header"
+        android:text="Button" />
+
+    <AutoCompleteTextView
+        android:id="@+id/header"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="10" >
+
+        <requestFocus />
+    </AutoCompleteTextView>
+    
+ </RelativeLayout>
+    <ListView  android:id="@+id/list" 
+        android:layout_height="fill_parent" 
+        android:layout_width="fill_parent"
+        android:layout_weight="1"/>
+
+    
+</LinearLayout>
+    
+
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/name"
+        android:layout_marginLeft="102dp"
+        android:layout_marginTop="32dp"
+        android:layout_x="71dp"
+        android:layout_y="178dp"
+        android:text="Need Taxi" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"        
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="113dp"
+        android:layout_x="3dp"
+        android:layout_y="121dp"
+        android:ems="10"
+        android:singleLine="true">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignParentTop="true"
+        android:layout_x="243dp"
+        android:layout_y="-3dp"
+        android:text="logout" />
+
+    <Button
+        android:id="@+id/taxi"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="View Taxi Around"
+        android:onClick="viewtaxiaround" />
+
+    <Button
+        android:id="@+id/relocate"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Relocate Me"
+        android:onClick="relocateme" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/relocate"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="18dp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/name"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="52dp"
+        android:text="Provide Destination"
+        android:onClick="destinationset" />
+
+</RelativeLayout>

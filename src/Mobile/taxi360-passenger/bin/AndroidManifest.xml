@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sg.edu.astar.ihpc.passenger"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="18" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="sg.edu.astar.ihpc.passenger.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="sg.edu.astar.ihpc.passenger.permission.C2D_MESSAGE" />
+
+    <permission
+        android:name="sg.edu.astar.ihpc.passenger.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="sg.edu.astar.ihpc.passenger.permission.MAPS_RECEIVE" />
+    <!-- receives GCM messages -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- GCM connects to Google services -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- GCM requires a Google account -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+
+    <!-- wake the processor if a GCM message is received -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.example.taxi360_taxi.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:name="sg.edu.astar.ihpc.passenger.entity.CurrentLocation"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:noHistory="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.LoginView"
+            android:label="@string/app_name" >
+        </activity>
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyARMPXQPO0q7cle8epyN6lBHO82RTi9ubk" />
+        <!--
+             meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /
+        -->
+
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.RegisterPhoneActivity"
+            android:label="@string/title_activity_register_phone" >
+        </activity>
+
+        <receiver
+            android:name="sg.edu.astar.ihpc.passenger.util.CheckConnectivity"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="sg.edu.astar.ihpc.passenger" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="sg.edu.astar.ihpc.passenger.GCMIntentService" >
+        </service>
+
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.RideActivity"
+            android:label="@string/title_activity_ride" >
+        </activity>
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.Rating"
+            android:label="@string/title_activity_ride" >
+        </activity>
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.ViewTaxiActivity"
+            android:label="@string/title_activity_view_taxi" >
+        </activity>
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.RelocateMeActivity"
+            android:label="@string/title_activity_relocate_me" >
+        </activity>
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.RegistrationActivity"
+            android:label="@string/title_activity_registration" >
+        </activity>
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="sg.edu.astar.ihpc.passenger.BookActivity"
+            android:label="@string/title_activity_book" >
+        </activity>
+    </application>
+
+    <meta-data
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyARMPXQPO0q7cle8epyN6lBHO82RTi9ubk" />
+    <!--
+          meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+    -->
+
+</manifest>

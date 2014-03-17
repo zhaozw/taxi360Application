@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+     <EditText
+	                android:id="@+id/name"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentTop="true"
+	                android:hint="name"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+     <EditText
+	                android:id="@+id/license"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/name"
+	                android:hint="license id"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+     <EditText
+	                android:id="@+id/mobile"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/license"
+	                android:hint="mobile"
+	                android:inputType="phone"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+                 
+                 
+                 <EditText
+	                android:id="@+id/email"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/mobile"
+	                android:hint="email"
+	                android:inputType="textEmailAddress"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+	
+	            <EditText
+	                android:id="@+id/password"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/email"
+	                android:hint="password"
+	                android:inputType="textPassword"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+	            
+	            <EditText
+	                android:id="@+id/repassword"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/password"
+	                android:hint="Re-type password"
+	                android:inputType="textPassword"
+	                android:maxLines="1"
+	                android:singleLine="true" />
+	
+	            <Button
+	                android:id="@+id/register_button"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/repassword"
+	                android:onClick="registerListener"
+	                android:layout_marginTop="14dp"
+	               
+	                />
+
+	            <Button
+	                android:id="@+id/bkButton"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_below="@+id/register_button"
+	                android:layout_marginTop="14dp"
+	                android:onClick="backListener"
+	                 />
+
+</RelativeLayout>

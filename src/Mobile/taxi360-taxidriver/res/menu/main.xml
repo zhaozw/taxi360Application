@@ -1,0 +1,23 @@
+
+ <!--   <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/Logout"
+         
+          android:title="@string/Logout"></item>
+          
+    <item android:id="@+id/MyPlaces"
+          
+          android:title="@string/MyPlaces" />
+</menu>
+
+ -->
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+ <item
+        android:id="@+id/Logout"
+       
+        android:title="Logout"/>
+   
+ <item
+        android:id="@+id/MyPlaces"
+        android:title="MyPlaces">
+    </item>
+    </menu>

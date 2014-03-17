@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">taxi360-passenger</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="app_id">672308089468454</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_register_phone">RegisterPhoneActivity</string>
+
+    <string-array name="menus">
+        <item>Logout</item>
+    </string-array>
+
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+    <string name="title_activity_ride">RideActivity</string>
+    <string name="title_activity_view_taxi">ViewTaxiActivity</string>
+    <string name="title_activity_relocate_me">RelocateMeActivity</string>
+    <string name="title_activity_registration">RegistrationActivity</string>
+    <string name="title_activity_login_screen">LoginScreen</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_book">BookActivity</string>
+
+</resources>

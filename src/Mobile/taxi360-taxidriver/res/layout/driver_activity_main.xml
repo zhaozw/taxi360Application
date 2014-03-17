@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment" />
+
+    <include layout="@layout/availability" />
+
+    <RelativeLayout
+        android:id="@+id/AbsoluteLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <Button
+            android:id="@+id/ride"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="80dp"
+            android:text="Ride Started" />
+        
+          <Button
+            android:id="@+id/reachedPassenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ride"
+            android:layout_alignLeft="@+id/ride"
+            android:layout_alignRight="@+id/ride"
+            android:onClick="reachedPassenger"
+            android:text="Reached Passenger" />
+
+        <Button
+            android:id="@+id/textView"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="41dp"
+            android:onClick="PassengerList"
+            android:text="PassengerList" />
+
+      
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,118 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity" >
+
+    <!-- Login progress -->
+
+    <LinearLayout
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/login_status_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/login_progress_signing_in"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <!-- Login form -->
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            style="@style/LoginFormContainer"
+            android:orientation="vertical" >
+            
+           <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/description"
+        android:src="@drawable/facebook_login"
+        android:onClick="loginviafacebook" />
+            
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true" 
+        		android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" 
+        		android:layout_margin="10dp"/>
+            
+            <RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <Button
+        android:id="@+id/sign_in_button"
+        android:layout_alignParentRight="true"          
+        android:layout_height="wrap_content" 
+        android:layout_width="140dp"
+        		android:layout_margin="10dp"
+        android:text="@string/Sign_in" />
+
+    <Button
+        android:layout_width="140dp"
+        android:id="@+id/register_button"
+        android:layout_alignParentLeft="true"          
+        android:layout_height="wrap_content" 
+        		android:layout_margin="10dp"
+        		android:onClick="register"
+                android:text="@string/Sign_up" />
+
+</RelativeLayout>
+
+            		  <TextView android:id="@+id/link_forgot_password" 
+		  		android:layout_width="fill_parent"
+		  		android:layout_height="wrap_content"
+		  		android:layout_marginTop="40dip"
+		  		android:layout_marginBottom="40dip"
+		  		android:text="@string/action_forgot_password"
+		  		android:gravity="center"
+		  		android:textSize="20sp"
+		  		android:textColor="#0b84aa"/>
+
+
+            <!--  Button
+                android:id="@+id/forgot_password_button"
+                android:layout_width="290dp"
+        		android:layout_height="wrap_content"
+        		android:layout_gravity="center_horizontal"
+        		android:layout_margin="10dp" 
+                android:text="@string/Forgot_password" /-->
+        </LinearLayout>
+    </ScrollView>
+
+</merge>
